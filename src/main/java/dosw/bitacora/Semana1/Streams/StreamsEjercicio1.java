@@ -1,4 +1,4 @@
-package com.ducuara.Semana1;
+package dosw.bitacora.Semana1.Streams;
 
 import java.util.List;
 import java.util.stream.Collectors;

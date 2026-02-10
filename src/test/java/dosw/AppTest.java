@@ -1,4 +1,4 @@
-package com.ducuara;
+package dosw;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

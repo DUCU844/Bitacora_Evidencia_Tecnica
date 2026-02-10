@@ -1,4 +1,4 @@
-package com.ducuara;
+package dosw.bitacora;
 
 /**
  * Hello world!
