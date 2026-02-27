@@ -174,3 +174,32 @@ El aspirante accede a la página web de la ECI, navega a la sección *"Inscripci
 ## Ejercicio en Clase: Manual de Identidad del Estudiante
 > *Hecho en Semana3 al final del README por confusión.*
 
+
+
+## Autoevaluación
+**¿Qué entendía mal antes?**
+
+- Antes pensaba que los requerimientos solo eran una lista de cosas que el sistema debía hacer, sin entender la 
+diferencia clara entre funcionales y no funcionales.
+- No dimensionaba realmente la importancia del análisis de requerimientos antes de empezar a programar. Tendía a pensar
+primero en el código y después en la estructura. 
+- Tampoco tenía claridad sobre la utilidad real de las heurísticas de Nielsen ni sobre cómo validar correctamente una
+interfaz antes de desarrollarla.
+
+**¿Qué entiendo ahora?**
+- Ahora entiendo que:
+    - Un requerimiento funcional define lo que el sistema debe hacer.
+    - Un requerimiento no funcional define características o condiciones que el sistema debe cumplir (aunque aún debo 
+  reforzar mejor su diferencia exacta). 
+    - El análisis de requerimientos sirve para comprender profundamente el proyecto antes de implementarlo.
+    - El diagrama de contexto muestra una visión general del sistema y su entorno, mientras que el diagrama de casos de 
+  uso muestra cómo interactúan los usuarios con funcionalidades específicas. 
+    - Un mockup permite visualizar previamente la aplicación para validar lógica y diseño antes de programar.
+- También entendí que estructurar antes de codificar evita hacer “código a la loca” y mejora la organización del proyecto.
+
+**¿Qué me falta reforzar?**
+- Entender con mayor claridad la diferencia entre requerimientos funcionales y no funcionales.
+- Profundizar en las heurísticas de Nielsen y su aplicación práctica.
+- Fortalecer la redacción correcta y detallada de requerimientos.
+- Aprender a detectar ambigüedades y contradicciones en requerimientos.
+- Practicar más la construcción de diagramas desde cero, no solo interpretarlos.
