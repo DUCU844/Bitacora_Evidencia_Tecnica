@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.ducuara</groupId>
-  <artifactId>Bitacora_Evidencia_Tecnica</artifactId>
+  <artifactId>Bitacora</artifactId>
   <version>1.0</version>
   <packaging>jar</packaging>
 
