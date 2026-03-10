@@ -5,7 +5,7 @@ import java.util.List;
 public class Student {
     String id;
     String name;
-    String team;
+    String team; // "DORADO", "AZUL", "VERDE"
     List<Grade> grades;
 
     public Student(String id, String name, String team, List<Grade> grades) {
@@ -13,6 +13,12 @@ public class Student {
         this.name = name;
         this.team = team;
         this.grades = grades;
+    }
+
+    public static List<Student> getStudentsFromTeamDorado(List<Student> students) {
+        return students.stream()
+                .filter(s -> "DORADO".equals(s.getTeam()))
+                .toList();
     }
 
     public String getId() {
