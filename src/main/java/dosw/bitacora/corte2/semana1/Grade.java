@@ -6,7 +6,28 @@ public class Grade {
     String subject;
     double score;
     LocalDate date;
-
     boolean passed;
 
+    public Grade(String subject, double score, LocalDate date, boolean passed) {
+        this.subject = subject;
+        this.score = score;
+        this.date = date;
+        this.passed = passed;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public double getScore() {
+        return score;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public boolean isPassed() {
+        return passed;
+    }
 }
