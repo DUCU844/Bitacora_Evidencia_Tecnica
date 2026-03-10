@@ -15,12 +15,6 @@ public class Student {
         this.grades = grades;
     }
 
-    public static List<Student> getStudentsFromTeamDorado(List<Student> students) {
-        return students.stream()
-                .filter(s -> "DORADO".equals(s.getTeam()))
-                .toList();
-    }
-
     public String getId() {
         return id;
     }
