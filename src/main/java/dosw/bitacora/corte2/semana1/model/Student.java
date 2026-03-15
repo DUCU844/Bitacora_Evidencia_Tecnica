@@ -1,4 +1,4 @@
-package dosw.bitacora.corte2.semana1;
+package dosw.bitacora.corte2.semana1.model;
 
 import java.util.List;
 
