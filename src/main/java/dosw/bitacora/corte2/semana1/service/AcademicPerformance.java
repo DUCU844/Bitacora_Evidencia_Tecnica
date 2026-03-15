@@ -6,6 +6,7 @@ import dosw.bitacora.corte2.semana1.model.Student;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.LinkedHashMap;
 
 public class AcademicPerformance {
 
@@ -118,6 +119,44 @@ public class AcademicPerformance {
                 }));
     }
 
+    //Obtener la materia con más reprobaciones
+    public String getSubjectWithMostFailures(List<Student> students) {
 
+        return students.stream()
+                .flatMap(s -> s.getGrades().stream())
+                .filter(g -> !g.isPassed())
+                .collect(Collectors.groupingBy(
+                        Grade::getSubject,
+                        Collectors.counting()
+                ))
+                .entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getKey)
+                .orElse(null);
+    }
 
+    //Tome solo estudiantes del equipo DORADO, Obtenga todas sus notas,
+    // Filtre solo notas aprobadas,Agrupe por materia, Calcule promedio por materia,
+    // Ordene descendente por promedio, Retorne un LinkedHashMap preservando orden.
+    public Map<String, Double> doradoApprovedAverageBySubject(List<Student> students) {
+
+        return students.stream()
+                .filter(s -> "DORADO".equals(s.getTeam()))
+                .flatMap(s -> s.getGrades().stream())
+                .filter(Grade::isPassed)
+                .collect(Collectors.groupingBy(
+                        Grade::getSubject,
+                        Collectors.averagingDouble(Grade::getScore)
+                ))
+                .entrySet()
+                .stream()
+                .sorted(Map.Entry.<String, Double>comparingByValue().reversed())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (a,b)->a,
+                        LinkedHashMap::new
+                ));
+    }
 }
