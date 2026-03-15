@@ -66,6 +66,22 @@ public class AcademicPerformance {
                 .orElse(0.0);
     }
 
+    //Retornar las materias reprobadas por equipo -> Retornar Map <String, Long>
+    // donde la clave es el nombre del equipo y el valor la cantidad total de materias reprobadas
+    public Map<String, Long> getFailedSubjectsByTeam(List<Student> students) {
+
+        return students.stream()
+                .collect(Collectors.groupingBy(
+                        Student::getTeam,
+                        Collectors.flatMapping(
+                                s -> s.getGrades().stream(),
+                                Collectors.filtering(
+                                        g -> !g.isPassed(),
+                                        Collectors.counting()
+                                )
+                        )
+                ));
+    }
 
 
 
