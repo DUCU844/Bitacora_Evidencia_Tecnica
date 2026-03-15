@@ -83,6 +83,26 @@ public class AcademicPerformance {
                 ));
     }
 
+    //Top 3 estudiantes con mas materias aprobadas -> Retornar lista ordenada de manera descendente
+    public List<Student> getTop3StudentsWithMostApproved(List<Student> students) {
+
+        return students.stream()
+                .sorted((s1, s2) -> Long.compare(
+                        countApproved(s2),
+                        countApproved(s1)
+                ))
+                .limit(3)
+                .toList();
+    }
+
+    private long countApproved(Student student) {
+
+        return student.getGrades()
+                .stream()
+                .filter(Grade::isPassed)
+                .count();
+    }
+
 
 
 }
