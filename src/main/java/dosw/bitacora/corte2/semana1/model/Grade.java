@@ -30,4 +30,14 @@ public class Grade {
     public boolean isPassed() {
         return passed;
     }
+
+    @Override
+    public String toString() {
+        return "Grade{" +
+                "subject='" + subject + '\'' +
+                ", score=" + score +
+                ", date=" + date +
+                ", passed=" + passed +
+                '}';
+    }
 }

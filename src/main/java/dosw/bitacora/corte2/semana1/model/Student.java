@@ -30,4 +30,14 @@ public class Student {
     public List<Grade> getGrades() {
         return grades;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", team='" + team + '\'' +
+                ", grades=" + grades +
+                '}';
+    }
 }

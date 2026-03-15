@@ -142,7 +142,7 @@ public class AcademicPerformance {
     public Map<String, Double> doradoApprovedAverageBySubject(List<Student> students) {
 
         return students.stream()
-                .filter(s -> "DORADO".equals(s.getTeam()))
+                .filter(s -> TEAM_DORADO.equals(s.getTeam()))
                 .flatMap(s -> s.getGrades().stream())
                 .filter(Grade::isPassed)
                 .collect(Collectors.groupingBy(
