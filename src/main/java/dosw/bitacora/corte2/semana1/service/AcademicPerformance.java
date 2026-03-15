@@ -103,6 +103,21 @@ public class AcademicPerformance {
                 .count();
     }
 
+    //Agrupar estudiantes por estado academico: Clasificarlos por ALTO RENDIMIENTO -> Promedio >=4,5 ,
+    // REGULAR -> Promedio entre 3,5 y 4.49, RIESGO -> promedio < 3,5
+    public Map<String, List<Student>> groupByAcademicStatus(List<Student> students) {
+
+        return students.stream()
+                .collect(Collectors.groupingBy(student -> {
+
+                    double avg = getStudentAverage(student);
+
+                    if (avg >= 4.5) return "ALTO RENDIMIENTO";
+                    if (avg >= 3.5) return "REGULAR";
+                    return "RIESGO";
+                }));
+    }
+
 
 
 }
